@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-export default function CreateCategoryPage() {
+export default function page() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const editId = searchParams.get("edit"); // Check if we are in Edit mode
@@ -159,9 +159,7 @@ export default function CreateCategoryPage() {
               disabled={loading}
               className={cn(
                 "px-6 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg  transition-all flex items-center gap-2",
-                loading
-                  ? "opacity-70 cursor-wait"
-                  : "hover:bg-blue-700 hover:",
+                loading ? "opacity-70 cursor-wait" : "hover:bg-blue-700 hover:",
               )}
             >
               {loading ? (
